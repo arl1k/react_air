@@ -80,7 +80,7 @@ class App extends Component {
         if (json) {
           this.SetProperties(json);
           
-          if (json.length < 50 || offset >= 150) { //limit responce
+          if (json.length < 50 || offset >= 150) { //limit responce!!!!!!!!!!!!!
             this.setState({ cityChoiceButtonDisabled: false })
             return true;
           }
