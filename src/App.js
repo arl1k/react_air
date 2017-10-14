@@ -90,7 +90,6 @@ class App extends Component {
         }
       })
       .catch(function (err) {
-        this.setState({ cityChoiceButtonDisabled: false })
         console.log(err);
       })
   }
