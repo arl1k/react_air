@@ -104,23 +104,13 @@ class App extends Component {
   }
 
   ShowReviews(event) {
-    if (this.state.reviews.length > 0) { //hide loaded reviews
-      return new Promise((resolve, reject) => {
-        this.setState({ reviews: [], reviewButtonDisabled: false }, resolve)
-      })
-        .then(() => {
-          return true;
-        })
-    }
-    else {
       let id = event.currentTarget.getAttribute('data-propid');
       return new Promise((resolve, reject) => {
-        this.setState({ reviews: [], reviewButtonDisabled: true }, resolve)
+        this.setState({ reviews: [], reviewButtonDisabled: true, stopLoadReviews : false }, resolve)
       })
         .then(() => {
           this.LoadAllReviews(id)
         })
-    }
   }
 
   LoadAllReviews(propId, offset = 0) {

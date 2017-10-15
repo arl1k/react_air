@@ -26,7 +26,7 @@ class CityChoice extends React.Component {
     }
 
     SearchProperties(event) {
-        if (this.state.selectValue) {
+        if (this.state.selectValue && this.state.selectValue != "Select an Option") {
             this.props.search(this.state.selectValue);
         }
         else {
