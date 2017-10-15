@@ -9,7 +9,7 @@ class DetailsModal extends React.Component {
         let reviewsNum = `Rating based on ${this.props.propertyNumOfReviews} reviews.`
 
         return (
-            <Modal {...this.props} bsSize="large" aria-labelledby="contained-modal-title-lg" onEntered={this.props.onShow}>
+            <Modal {...this.props} bsSize="large" aria-labelledby="contained-modal-title-lg">
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-lg"><b> {this.props.propertyName} {this.props.propertyStarRating}</b></Modal.Title>
                 </Modal.Header>
